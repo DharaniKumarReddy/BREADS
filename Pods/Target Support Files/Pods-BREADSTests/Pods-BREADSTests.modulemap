@@ -1,0 +1,6 @@
+framework module Pods_BREADSTests {
+  umbrella header "Pods-BREADSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

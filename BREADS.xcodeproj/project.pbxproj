@@ -10,12 +10,18 @@
 		3C65ED33F262BD25B9CEDA31 /* Pods_BREADS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72FB8F0FAE5198E1F80955B /* Pods_BREADS.framework */; };
 		5EEFADB8BABED4907725D09C /* Pods_BREADSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5804082E3646878A7918F7C3 /* Pods_BREADSUITests.framework */; };
 		9FD2341221BE9FD50056BDC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2341121BE9FD50056BDC1 /* AppDelegate.swift */; };
-		9FD2341421BE9FD50056BDC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2341321BE9FD50056BDC1 /* ViewController.swift */; };
 		9FD2341721BE9FD50056BDC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD2341521BE9FD50056BDC1 /* Main.storyboard */; };
 		9FD2341921BE9FD70056BDC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD2341821BE9FD70056BDC1 /* Assets.xcassets */; };
 		9FD2341C21BE9FD70056BDC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD2341A21BE9FD70056BDC1 /* LaunchScreen.storyboard */; };
 		9FD2342721BE9FD70056BDC1 /* BREADSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2342621BE9FD70056BDC1 /* BREADSTests.swift */; };
 		9FD2343221BE9FD70056BDC1 /* BREADSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2343121BE9FD70056BDC1 /* BREADSUITests.swift */; };
+		9FD2344521BEA4020056BDC1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2344021BEA4020056BDC1 /* Constant.swift */; };
+		9FD2344621BEA4020056BDC1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2344121BEA4020056BDC1 /* Helper.swift */; };
+		9FD2344721BEA4020056BDC1 /* PushNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2344221BEA4020056BDC1 /* PushNotificationHandler.swift */; };
+		9FD2344821BEA4020056BDC1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2344321BEA4020056BDC1 /* Route.swift */; };
+		9FD2344921BEA4020056BDC1 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2344421BEA4020056BDC1 /* TopViewController.swift */; };
+		9FD2344C21BEA45C0056BDC1 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2344B21BEA45C0056BDC1 /* DashboardViewController.swift */; };
+		9FD2344E21BEA4630056BDC1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2344D21BEA4630056BDC1 /* MenuViewController.swift */; };
 		AAFDF43FF251856A3F08C32D /* Pods_BREADSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC761380C2BD3A88F32FF168 /* Pods_BREADSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +49,6 @@
 		83EEF8056DCDF4BAC79DE99D /* Pods-BREADSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BREADSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BREADSUITests/Pods-BREADSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9FD2340E21BE9FD50056BDC1 /* BREADS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BREADS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD2341121BE9FD50056BDC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FD2341321BE9FD50056BDC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FD2341621BE9FD50056BDC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FD2341821BE9FD70056BDC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FD2341B21BE9FD70056BDC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +59,13 @@
 		9FD2342D21BE9FD70056BDC1 /* BREADSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BREADSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD2343121BE9FD70056BDC1 /* BREADSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREADSUITests.swift; sourceTree = "<group>"; };
 		9FD2343321BE9FD70056BDC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FD2344021BEA4020056BDC1 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		9FD2344121BEA4020056BDC1 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9FD2344221BEA4020056BDC1 /* PushNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationHandler.swift; sourceTree = "<group>"; };
+		9FD2344321BEA4020056BDC1 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		9FD2344421BEA4020056BDC1 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		9FD2344B21BEA45C0056BDC1 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		9FD2344D21BEA4630056BDC1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AB1FD5F44EB44D5A7FA6A187 /* Pods-BREADSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BREADSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BREADSTests/Pods-BREADSTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEB9F83F14BC09E49BEA5B57 /* Pods-BREADSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BREADSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BREADSTests/Pods-BREADSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B72FB8F0FAE5198E1F80955B /* Pods_BREADS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BREADS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				9FD2341121BE9FD50056BDC1 /* AppDelegate.swift */,
-				9FD2341321BE9FD50056BDC1 /* ViewController.swift */,
+				9FD2344A21BEA4370056BDC1 /* Controllers */,
+				9FD2343F21BEA3F10056BDC1 /* Helper */,
 				9FD2341521BE9FD50056BDC1 /* Main.storyboard */,
 				9FD2341821BE9FD70056BDC1 /* Assets.xcassets */,
 				9FD2341A21BE9FD70056BDC1 /* LaunchScreen.storyboard */,
@@ -153,6 +166,27 @@
 				9FD2343321BE9FD70056BDC1 /* Info.plist */,
 			);
 			path = BREADSUITests;
+			sourceTree = "<group>";
+		};
+		9FD2343F21BEA3F10056BDC1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9FD2344021BEA4020056BDC1 /* Constant.swift */,
+				9FD2344121BEA4020056BDC1 /* Helper.swift */,
+				9FD2344221BEA4020056BDC1 /* PushNotificationHandler.swift */,
+				9FD2344321BEA4020056BDC1 /* Route.swift */,
+				9FD2344421BEA4020056BDC1 /* TopViewController.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9FD2344A21BEA4370056BDC1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9FD2344B21BEA45C0056BDC1 /* DashboardViewController.swift */,
+				9FD2344D21BEA4630056BDC1 /* MenuViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EEB4D965BC4314A9718001AA /* Frameworks */ = {
@@ -413,8 +447,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FD2341421BE9FD50056BDC1 /* ViewController.swift in Sources */,
 				9FD2341221BE9FD50056BDC1 /* AppDelegate.swift in Sources */,
+				9FD2344C21BEA45C0056BDC1 /* DashboardViewController.swift in Sources */,
+				9FD2344521BEA4020056BDC1 /* Constant.swift in Sources */,
+				9FD2344821BEA4020056BDC1 /* Route.swift in Sources */,
+				9FD2344721BEA4020056BDC1 /* PushNotificationHandler.swift in Sources */,
+				9FD2344621BEA4020056BDC1 /* Helper.swift in Sources */,
+				9FD2344921BEA4020056BDC1 /* TopViewController.swift in Sources */,
+				9FD2344E21BEA4630056BDC1 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +633,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D245C92AL4;
 				INFOPLIST_FILE = BREADS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.integro.BREADS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -609,7 +652,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D245C92AL4;
 				INFOPLIST_FILE = BREADS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.integro.BREADS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -626,7 +672,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D245C92AL4;
 				INFOPLIST_FILE = BREADSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.integro.BREADSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -644,7 +694,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D245C92AL4;
 				INFOPLIST_FILE = BREADSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.integro.BREADSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -661,7 +715,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D245C92AL4;
 				INFOPLIST_FILE = BREADSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.integro.BREADSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -678,7 +736,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D245C92AL4;
 				INFOPLIST_FILE = BREADSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.integro.BREADSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

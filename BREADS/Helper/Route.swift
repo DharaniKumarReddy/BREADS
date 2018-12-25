@@ -8,25 +8,18 @@
 
 import Foundation
 
-let Base_Url = "http://youthactiv8.com"
+let Base_Url = "http://breadsdonations.com"
 
 enum Route {
-    case coverPhoto
     case news
-    case newsMultipleImages
-    case nycNews
-    case aysMagazine
-    case regions
-    case officeAddress
-    case officeBearers
+    case notifications
+    case volunteer
+    case internship
+    case projects
+    case projectList
+    case partners
+    case newsLetter
     case annualReport
-    case regionPhotos
-    case regionVideos
-    case governingBody
-    case nexco
-    case nationalCouncil
-    case notification
-    case animationSongs
     
     var absoluteURL: URL {
         return URL(string: Base_Url + apiPath)!
@@ -34,38 +27,24 @@ enum Route {
     
     private var apiPath: String {
         switch self {
-        case .coverPhoto:
-            return "/icym_app/icym_coverphoto.php"
         case .news:
-            return "/icym_app/icym_news.php"
-        case .newsMultipleImages:
-            return "/icym_app/icym_newsimages.php"
-        case .nycNews:
-            return "/icym_app/icym_nycnews.php"
-        case .aysMagazine:
-            return "/icym_app/magazine.php"
-        case .regions:
-            return "/icym_app/icym_main.php"
-        case .officeAddress:
-            return "/icym_app/region_office.php"
-        case .officeBearers:
-            return "/icym_app/icym_bearers.php"
+            return "/breads_news.php"
+        case .notifications:
+            return "/breads_notification.php"
+        case .volunteer:
+            return "/breads_volunteer.php"
+        case .internship:
+            return "/breads_internship.php"
+        case .projects:
+            return "/breads_projects.php"
+        case .projectList:
+            return "/breads_project1.php"
+        case .partners:
+            return "/breads_partners.php"
+        case .newsLetter:
+            return "/breads_newsletter.php"
         case .annualReport:
-            return "/icym_app/icym_annualreport.php"
-        case .regionPhotos:
-            return "/icym_app/icym_photograph.php"
-        case .regionVideos:
-            return "/icym_app/icym_videos.php"
-        case .governingBody:
-            return "/icym_app/governing.php"
-        case .nationalCouncil:
-            return "/icym_app/icym_national.php"
-        case .nexco:
-            return "/icym_app/nexco.php"
-        case .notification:
-            return "/icym_app/icym_notification.php"
-        case .animationSongs:
-            return "/icym_app/icym_videos1.php"
+            return "/breads_annualreport.php"
         }
     }
 }

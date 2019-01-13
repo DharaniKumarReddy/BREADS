@@ -25,6 +25,11 @@ class PresenceViewController: BaseViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     // MARK:- Private Methods
     private func animateScrollView(point: CGPoint) {
         scrollView.setContentOffset(point, animated: true)

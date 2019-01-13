@@ -20,6 +20,7 @@ class PartnersViewController: UIViewController {
         title = "DON BOSCO, BREADS"
         getPartners()
         navigationBackWithNoText()
+        navigationController?.isNavigationBarHidden = false
     }
     
     private func getPartners() {

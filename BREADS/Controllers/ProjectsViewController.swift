@@ -24,6 +24,7 @@ class ProjectsViewController: UIViewController {
         getProjects()
         title = "PROJECTS"
         navigationBackWithNoText()
+        navigationController?.isNavigationBarHidden = false
     }
     
     private func getProjects() {

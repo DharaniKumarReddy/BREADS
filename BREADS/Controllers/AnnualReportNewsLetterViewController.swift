@@ -25,6 +25,7 @@ class AnnualReportNewsLetterViewController: BaseViewController {
 
         title = "DON BOSCO, BREADS"
         navigationBackWithNoText()
+        navigationController?.isNavigationBarHidden = false
         isReports ? getAnnualReports() : getNewsLetters()
     }
     

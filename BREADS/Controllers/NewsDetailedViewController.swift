@@ -18,6 +18,8 @@ class NewsDetailedViewController: UIViewController {
 
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableView.automaticDimension
+        navigationBackWithNoText()
+        title = "DON BOSCO, BREADS"
     }
 }
 

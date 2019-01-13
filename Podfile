@@ -5,6 +5,9 @@ def list_of_library
     use_frameworks!
     # more pods...
     pod 'SlideMenuControllerSwift'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    
 end
 
 target 'BREADS' do

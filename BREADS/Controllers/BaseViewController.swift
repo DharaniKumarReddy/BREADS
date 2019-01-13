@@ -14,4 +14,8 @@ class BaseViewController: UIViewController {
         webViewController.webUrl = urlString
         navigationController?.pushViewController(webViewController, animated: true)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

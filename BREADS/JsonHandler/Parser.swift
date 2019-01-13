@@ -215,6 +215,68 @@ struct NewsLetterArray: Codable {
     }
 }
 
+struct Photo: Codable {
+    var id: String
+    var folderName: String
+    var image: String
+    var updatedDate: String
+    var createdDate: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id = "id", folderName = "foldername", image = "image", updatedDate = "updated_date", createdDate = "created_date"
+    }
+}
+
+struct GalleryPhotos: Codable {
+    var success: Int
+    var photos: [Photo]
+    
+    private enum CodingKeys: String, CodingKey {
+        case success = "success", photos = "gallery"
+    }
+}
+
+struct Video: Codable {
+    var vId: String
+    var title: String
+    //var description: NSNull
+    var updatedDate: String
+    var createdDate: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case vId = "v_id", title = "title", updatedDate = "updated_date", createdDate = "created_date"
+    }
+}
+
+struct Videos: Codable {
+    var success: Int
+    var videos: [Video]
+    
+    private enum CodingKeys: String, CodingKey {
+        case success = "success", videos = "video"
+    }
+}
+
+struct GalleryPhoto: Codable {
+    var id: String
+    var gId: String
+    var images: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id = "id", gId = "g_id", images = "images"
+    }
+}
+
+struct PhotosListArray: Codable {
+    var galleryImages: [GalleryPhoto]
+    var success: Int
+    var message: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case success = "success", message = "message", galleryImages = "gallery_images"
+    }
+}
+
 class Parser {
     static let sharedInstance = Parser()
     private init() {}
@@ -342,5 +404,69 @@ class Parser {
         } catch {
             print(error)
         }
+    }
+    
+    internal func parseGalleryPhotos(_ jsonString: String, onSuccess: ([Photo]) -> Void) {
+        do {
+            let decodeData = try JSONDecoder().decode(GalleryPhotos.self, from: Data(jsonString.utf8))
+            var photosArray: [Photo] = []
+            for photo in decodeData.photos {
+                let photoObject = Photo(id: photo.id, folderName: photo.folderName, image: photo.image, updatedDate: photo.updatedDate, createdDate: photo.createdDate)
+                photosArray.append(photoObject)
+            }
+            onSuccess(photosArray)
+        } catch {
+            print(error)
+        }
+    }
+    
+    internal func parseVideos(_ jsonString: String, onSuccess: ([Video]) -> Void) {
+        do {
+            let decodeData = try JSONDecoder().decode(Videos.self, from: Data(jsonString.utf8))
+            var videosArray: [Video] = []
+            for video in decodeData.videos {
+                let videoObject = Video(vId: video.vId, title: video.title, updatedDate: video.updatedDate, createdDate: video.createdDate)
+                videosArray.append(videoObject)
+            }
+            onSuccess(videosArray)
+        } catch {
+            print(error)
+        }
+    }
+    
+    internal func parseGalleryList(_ jsonString: String, onSuccess: ([GalleryPhoto]) -> Void) {
+        do {
+            let decodedData = try JSONDecoder().decode(PhotosListArray.self, from: Data(jsonString.utf8))
+            var photosList: [GalleryPhoto] = []
+            for photo in decodedData.galleryImages {
+                let photoObject = GalleryPhoto(id: photo.id, gId: photo.gId, images: photo.images)
+                photosList.append(photoObject)
+            }
+            onSuccess(photosList)
+        } catch {
+            print(error)
+        }
+    }
+    
+    internal func parseNotificationPayload(_ payloadString: String, onSuccess: (NotificationPayload) -> Void) {
+        do {
+            let decodedData = try JSONDecoder().decode(NotificationPayload.self, from: Data(payloadString.utf8))
+            onSuccess(decodedData)
+        } catch {
+            print(error)
+        }
+    }
+}
+
+struct NotificationPayload: Codable {
+    var id: Int
+    var image: String
+    var date: String
+    var title: String
+    var description: String
+    var updatedDate: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id = "id", image = "l_img", date = "date", title = "title", description = "description", updatedDate = "updated_date"
     }
 }

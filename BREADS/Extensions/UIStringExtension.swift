@@ -21,3 +21,11 @@ extension String {
             }.resume()
     }
 }
+
+func truncateCharactersInNotificationMessage(_ alertMessage:NSString) -> String {
+    var message = alertMessage
+    if message.length > 235 {
+        message = message.substring(with: NSRange(location: 0, length: 235)) as NSString
+    }
+    return message as String
+}

@@ -12,8 +12,6 @@ class PushNotificationHandler : NSObject {
     
     static let sharedInstance = PushNotificationHandler()
     
-    var isNotificationRecievedInForeground: Bool = false
-    
     var isLanchedByNotification: Bool = false
     
     var isPushNotificationRecieved: Bool = false

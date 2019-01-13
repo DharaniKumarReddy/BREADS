@@ -250,4 +250,40 @@ class APICaller {
             onError(error)
         })
     }
+    
+    internal func getGalleryPhotos(onSuccess: @escaping ([Photo]) -> Void, onError: @escaping OnErrorMessage) {
+        enqueueRequest(
+            .POST, .photos, params: ["updated_at" : "2017-11-15 21:25:33" as AnyObject],
+            onSuccessResponse: { response in
+                Parser.sharedInstance.parseGalleryPhotos(response, onSuccess: { photos in
+                    onSuccess(photos)
+                })
+        }, onErrorMessage: { error in
+            onError(error)
+        })
+    }
+    
+    internal func getVideos(onSuccess: @escaping ([Video]) -> Void, onError: @escaping OnErrorMessage) {
+        enqueueRequest(
+            .POST, .videos, params: ["updated_at" : "2017-11-18 02:28:09" as AnyObject],
+            onSuccessResponse: { response in
+                Parser.sharedInstance.parseVideos(response, onSuccess: { videos in
+                    onSuccess(videos)
+                })
+        }, onErrorMessage: { error in
+            onError(error)
+        })
+    }
+    
+    internal func getGalleryHomeList(galleryId: String, onSuccess: @escaping ([GalleryPhoto]) -> Void, onError: @escaping OnErrorMessage) {
+        enqueueRequest(
+            .POST, .galleryHome, params: ["g_id" : galleryId as AnyObject],
+            onSuccessResponse: { response in
+                Parser.sharedInstance.parseGalleryList(response, onSuccess: { images in
+                    onSuccess(images)
+                })
+        }, onErrorMessage: { error in
+            onError(error)
+        })
+    }
 }

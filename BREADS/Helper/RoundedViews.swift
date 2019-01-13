@@ -39,3 +39,21 @@ func yellowBorderView(_ view: UIView, border: CGFloat) {
     view.layer.borderWidth = border
     view.layer.borderColor = UIColor(displayP3Red: 255/255, green: 222/255, blue: 30/255, alpha: 1.0).cgColor
 }
+
+class DynamicLabel: UILabel {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.font = UIFont(name: "HoeflerText-Regular", size: getFontSize())
+    }
+}
+
+class DynamicButton: UIButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        titleLabel?.font = UIFont(name: "HoeflerText-Regular", size: getFontSize())
+    }
+}
+
+func getFontSize() -> CGFloat {
+    return iPhoneSE ? 17 : iPhoneStandard ? 19 : 21
+}

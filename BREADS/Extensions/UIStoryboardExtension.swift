@@ -72,4 +72,12 @@ extension UIStoryboard {
     class func loadPresenceViewController() -> PresenceViewController {
         return loadFromMain(String(describing: PresenceViewController.self)) as! PresenceViewController
     }
+    
+    class func loadPublicationsViewController() -> AnnualReportNewsLetterViewController {
+        return loadFromMain(String(describing: AnnualReportNewsLetterViewController.self)) as! AnnualReportNewsLetterViewController
+    }
+    
+    class func loadPhotosViewController() -> PhotosViewController {
+        return loadFromMain(String(describing: PhotosViewController.self)) as! PhotosViewController
+    }
 }

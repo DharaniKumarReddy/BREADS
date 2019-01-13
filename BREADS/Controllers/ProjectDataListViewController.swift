@@ -15,6 +15,8 @@ class ProjectDataListViewController: UIViewController {
     
     internal var project: Project?
     
+    private var activityController : UIActivityViewController!
+    
     // MARK:- IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     
@@ -35,6 +37,12 @@ class ProjectDataListViewController: UIViewController {
             self.tableView.reloadData()
         }, onError: { _ in })
     }
+    
+    private func loadActivityController(id: Int) {
+        let url = URL(string: "http://breadsdonations.com/projectshare.php?id=\(id)")!
+        activityController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        activityController.excludedActivityTypes = [.print, .copyToPasteboard, .assignToContact, .saveToCameraRoll, .addToReadingList]
+    }
 }
 
 extension ProjectDataListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -44,17 +52,27 @@ extension ProjectDataListViewController: UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProjectDataTableCell.self)) as? ProjectDataTableCell
+        cell?.delegate = self
         cell?.loadProjectData(project: projectDataList[indexPath.row])
         return cell ?? UITableViewCell()
     }
 }
 
+extension ProjectDataListViewController: ShareDelegate {
+    func share(id: Int) {
+        loadActivityController(id: id)
+        present(activityController, animated: true, completion: nil)
+    }
+}
+
 class ProjectDataTableCell: UITableViewCell {
+    internal weak var delegate: ShareDelegate?
     // MARK:- IBOutlets
     @IBOutlet private weak var projectDateLabel: UILabel!
     @IBOutlet private weak var projectTitleLabel: UILabel!
     @IBOutlet private weak var projectDescriptionLabel: UILabel!
     @IBOutlet private weak var projectImageView: UIImageView!
+    @IBOutlet private weak var shareButton: UIButton!
     
     // MARK:- Data Method
     internal func loadProjectData(project: ProjectData) {
@@ -62,6 +80,14 @@ class ProjectDataTableCell: UITableViewCell {
         projectTitleLabel.text = project.title
         projectDescriptionLabel.text = project.description
         projectDateLabel.text = project.date
+        shareButton.tag = Int(project.id) ?? 0
     }
     
+    @IBAction private func shareButton_Tapped(button: UIButton) {
+        delegate?.share(id: button.tag)
+    }
+}
+
+protocol ShareDelegate: class {
+    func share(id: Int)
 }

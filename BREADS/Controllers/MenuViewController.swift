@@ -9,7 +9,7 @@
 import UIKit
 import SlideMenuControllerSwift
 
-class MenuViewController: UIViewController {
+class MenuViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +20,7 @@ class MenuViewController: UIViewController {
     // MARK:- IBActions
     @IBAction private func projectsButton_Tapped() {
         slideMenuController()?.closeLeft()
-        let projectsViewController = UIStoryboard.loadProjectsViewController()
-        (slideMenuController()?.mainViewController as! UINavigationController).pushViewController(projectsViewController, animated: true)
+        loadProjectsController()
     }
     
     @IBAction private func partnersButoon_Tapped() {
@@ -32,17 +31,16 @@ class MenuViewController: UIViewController {
     
     @IBAction private func publicationsButton_Tapped() {
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        let callAction = UIAlertAction(title: "Annual Report", style: .default, handler: { _ in
-            
+        let reportAction = UIAlertAction(title: "Annual Report", style: .default, handler: { _ in
+            self.loadPublications(isReports: true)
         })
-        let emailAction = UIAlertAction(title: "News Letter", style: .default, handler: { _ in
-            
+        let letterAction = UIAlertAction(title: "News Letter", style: .default, handler: { _ in
+            self.loadPublications(isReports: false)
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { _ in
-            
         })
-        controller.addAction(callAction)
-        controller.addAction(emailAction)
+        controller.addAction(reportAction)
+        controller.addAction(letterAction)
         controller.addAction(cancelAction)
         present(controller, animated: true, completion: nil)
     }
@@ -51,5 +49,19 @@ class MenuViewController: UIViewController {
         slideMenuController()?.closeLeft()
         let presenceViewController = UIStoryboard.loadPresenceViewController()
         (slideMenuController()?.mainViewController as! UINavigationController).pushViewController(presenceViewController, animated: true)
+    }
+    
+    @IBAction private func socialButton_Tapped(button: UIButton) {
+        slideMenuController()?.closeLeft()
+        let webUrl = ["https://www.facebook.com/breadsbangalore.org/", "https://twitter.com/donboscobreads", "https://www.youtube.com/channel/UC5mMJjSpsrdIMEInAk7dfHw"][button.tag]
+        let webViewController = UIStoryboard.loadWebViewController()
+        webViewController.webUrl = webUrl
+        (slideMenuController()?.mainViewController as! UINavigationController).pushViewController(webViewController, animated: true)
+    }
+    
+    // MARK:- Private Methods
+    private func loadPublications(isReports: Bool) {
+        slideMenuController()?.closeLeft()
+        loadPublicationsController(isReports: isReports)
     }
 }

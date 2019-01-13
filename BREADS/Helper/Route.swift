@@ -20,6 +20,9 @@ enum Route {
     case partners
     case newsLetter
     case annualReport
+    case photos
+    case videos
+    case galleryHome
     
     var absoluteURL: URL {
         return URL(string: Base_Url + apiPath)!
@@ -45,6 +48,12 @@ enum Route {
             return "/breads_newsletter.php"
         case .annualReport:
             return "/breads_annualreport.php"
+        case .photos:
+            return "/breads_gallery.php"
+        case .videos:
+            return "/breads_video.php"
+        case .galleryHome:
+            return "/breads_gallery1.php"
         }
     }
 }

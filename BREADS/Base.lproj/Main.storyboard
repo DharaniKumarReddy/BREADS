@@ -881,7 +881,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56b-BL-jNg">
-                                                    <rect key="frame" x="12" y="12" width="351" height="353"/>
+                                                    <rect key="frame" x="12" y="12" width="351" height="351"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_bg" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-oV-WA3">
                                                             <rect key="frame" x="0.0" y="0.0" width="351" height="200"/>
@@ -903,19 +903,19 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Workshop" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcu-lP-q5f">
-                                                            <rect key="frame" x="8" y="241" width="335" height="23"/>
+                                                            <rect key="frame" x="8" y="241" width="335" height="21"/>
                                                             <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="21"/>
                                                             <color key="textColor" red="0.90732389690000004" green="0.33505338429999998" blue="0.00153970276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aiming" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-5R-2zY">
-                                                            <rect key="frame" x="8" y="272" width="335" height="16"/>
+                                                            <rect key="frame" x="8" y="270" width="335" height="16"/>
                                                             <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
                                                             <color key="textColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wms-L1-5fb">
-                                                            <rect key="frame" x="8" y="300" width="335" height="45"/>
+                                                            <rect key="frame" x="8" y="298" width="335" height="45"/>
                                                             <color key="backgroundColor" red="0.90732389690000004" green="0.33505338429999998" blue="0.00153970276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="45" id="jkk-OW-fD4"/>
@@ -924,6 +924,9 @@
                                                             <state key="normal" title="SHARE">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="shareButton_Tapped" destination="35m-Zy-Xde" eventType="touchUpInside" id="GG0-7J-cvC"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -954,10 +957,11 @@
                                                 <constraint firstItem="56b-BL-jNg" firstAttribute="leading" secondItem="H2D-fR-sP0" secondAttribute="leading" constant="12" id="ETM-zR-kkG"/>
                                                 <constraint firstItem="56b-BL-jNg" firstAttribute="top" secondItem="H2D-fR-sP0" secondAttribute="top" constant="12" id="XAM-3U-X9l"/>
                                                 <constraint firstAttribute="trailing" secondItem="56b-BL-jNg" secondAttribute="trailing" constant="12" id="ZLc-6o-gQq"/>
-                                                <constraint firstAttribute="bottom" secondItem="56b-BL-jNg" secondAttribute="bottom" id="eY2-ha-x6F"/>
+                                                <constraint firstAttribute="bottom" secondItem="56b-BL-jNg" secondAttribute="bottom" constant="2" id="eY2-ha-x6F"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="borderView" destination="56b-BL-jNg" id="Cey-7l-SgJ"/>
                                             <outlet property="newsDateLabel" destination="vDY-rc-rYV" id="8Wd-9F-ePq"/>
                                             <outlet property="newsDescriptionLabel" destination="bdn-5R-2zY" id="iAx-yH-Zzv"/>
                                             <outlet property="newsImageView" destination="iPM-oV-WA3" id="yMU-QU-zQH"/>
@@ -975,7 +979,7 @@
                         <constraints>
                             <constraint firstItem="CZJ-8V-L4a" firstAttribute="leading" secondItem="flw-fN-q2y" secondAttribute="leading" id="JJ8-mG-etT"/>
                             <constraint firstItem="flw-fN-q2y" firstAttribute="trailing" secondItem="CZJ-8V-L4a" secondAttribute="trailing" id="NWe-6I-kb5"/>
-                            <constraint firstItem="flw-fN-q2y" firstAttribute="bottom" secondItem="CZJ-8V-L4a" secondAttribute="bottom" id="bA0-31-G4U"/>
+                            <constraint firstAttribute="bottom" secondItem="CZJ-8V-L4a" secondAttribute="bottom" id="bA0-31-G4U"/>
                             <constraint firstItem="CZJ-8V-L4a" firstAttribute="top" secondItem="flw-fN-q2y" secondAttribute="top" id="bg7-y0-DGp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="flw-fN-q2y"/>

@@ -94,7 +94,7 @@ class DashboardViewController: BaseViewController {
     }
     
     private func loadActivityController() {
-        let url = URL(string: "https://play.google.com/store/apps/details?id=integro.app.breads&hl=en")!
+        let url = URL(string: "https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app/1449406290")!
         let activityItems = ["Help children fulfill their dreams. Support their education. Download this app to donate and spread the word among your friends. Thank you! \n", url] as [Any]
         activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         activityController.excludedActivityTypes = [.print, .copyToPasteboard, .assignToContact, .saveToCameraRoll, .addToReadingList]

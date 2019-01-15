@@ -35,7 +35,7 @@
                                                             </imageView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pN-wr-AXA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
-                                                                <color key="backgroundColor" white="0.5" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBG-yE-2ZJ">
                                                                 <rect key="frame" x="12" y="4" width="351" height="46"/>
@@ -211,13 +211,21 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volunteering" translatesAutoresizingMaskIntoConstraints="NO" id="fux-LP-LMa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                                             </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Jc-DP-Ktg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                                                <color key="backgroundColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="fux-LP-LMa" secondAttribute="trailing" id="7dK-ZO-TuR"/>
                                                             <constraint firstItem="fux-LP-LMa" firstAttribute="leading" secondItem="vMe-Pd-2R6" secondAttribute="leading" id="Irb-Gt-X1o"/>
+                                                            <constraint firstAttribute="bottom" secondItem="8Jc-DP-Ktg" secondAttribute="bottom" id="J5f-R4-XSO"/>
                                                             <constraint firstAttribute="bottom" secondItem="fux-LP-LMa" secondAttribute="bottom" id="Mt6-9F-eUH"/>
                                                             <constraint firstItem="fux-LP-LMa" firstAttribute="top" secondItem="vMe-Pd-2R6" secondAttribute="top" id="Yv0-Hx-DUs"/>
+                                                            <constraint firstAttribute="trailing" secondItem="8Jc-DP-Ktg" secondAttribute="trailing" id="iAJ-07-Xqe"/>
+                                                            <constraint firstItem="8Jc-DP-Ktg" firstAttribute="leading" secondItem="vMe-Pd-2R6" secondAttribute="leading" id="l4C-1p-zJQ"/>
+                                                            <constraint firstItem="8Jc-DP-Ktg" firstAttribute="top" secondItem="vMe-Pd-2R6" secondAttribute="top" id="nDW-R0-1Kn"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>

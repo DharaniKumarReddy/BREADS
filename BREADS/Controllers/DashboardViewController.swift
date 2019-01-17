@@ -174,7 +174,9 @@ extension DashboardViewController {
     }
     
     @IBAction private func donateButton_Tapped() {
-        pushWebViewController(urlString: "http://breadsdonations.com/profile.php")
+        if let url = URL(string: "http://breadsdonations.com/profile.php") {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
     @IBAction private func joinUsButton_Tapped() {
